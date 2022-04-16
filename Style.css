@@ -4,9 +4,16 @@ html, body {
 }
 
 body {
-    background-image: url('http://tapchimoitruong.vn/Files/Luu%20Trang%20-%20%20%E1%BA%A3nh/1.2018/samac2.png') ;
+    background-image: url('http://tapchimoitruong.vn/Files/Luu%20Trang%20-%20%20%E1%BA%A3nh/1.2018/samac2.png');
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
+}
+
+p {
+    position: absolute;
+    color: chartreuse;
+    font-size: 25px;
+    top: 20px;
 }

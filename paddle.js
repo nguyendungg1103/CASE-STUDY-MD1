@@ -1,16 +1,19 @@
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 const grid = 15;
-const paddleHeight = grid * 5; // 75
+const paddleHeight = grid * 10; // 75
 const maxPaddleY = canvas.height - grid - paddleHeight;
+let right = 0;
+let left = 0;
+
 
 let paddleSpeed = 6;
-let ballSpeed = 5;
+let ballSpeed = 4;
 
 const leftPaddle = {
     // bắt đầu trò chơi ở phía bên trái
     x: grid * 2,
-    y: canvas.height / 2 - paddleHeight / 2,
+    y: canvas.height/2  - paddleHeight/2 ,
     width: grid,
     height: paddleHeight,
 
@@ -20,7 +23,7 @@ const leftPaddle = {
 const rightPaddle = {
     // người chơi phía bên phải
     x: canvas.width - grid * 2,
-    y: canvas.height / 2 - paddleHeight / 2,
+    y: canvas.height /2 - paddleHeight /2,
     width: grid,
     height: paddleHeight,
 
@@ -39,7 +42,7 @@ const ball = {
 
     // vận tốc bóng, bắt đầu trên góc trên cùng bên phải
     dx: ballSpeed,
-    dy: -ballSpeed
+    dy: -ballSpeed,
 };
 function object() {
     context.beginPath();
