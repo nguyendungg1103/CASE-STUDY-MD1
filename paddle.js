@@ -54,8 +54,12 @@ function object() {
     //vẽ tường
     context.beginPath();
     context.fillStyle = 'white';
-    context.fillRect(0, 0, canvas.width, grid);
-    context.fillRect(0, canvas.height - grid, canvas.width, canvas.height);
+    for (let i = 0; i < canvas.width; i += grid*3) {
+        context.fillRect(i + grid, 0, grid*2, grid);
+    }
+    for (let i = 0; i < canvas.width; i += grid*3) {
+        context.fillRect(i + grid, canvas.height - grid, grid*2, grid);
+    }
     context.closePath();
 
 }
