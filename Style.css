@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-    background-image: url('http://tapchimoitruong.vn/Files/Luu%20Trang%20-%20%20%E1%BA%A3nh/1.2018/samac2.png');
+    background: black;
     display: flex;
     align-items: center;
     justify-content: center;
