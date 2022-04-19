@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-    background: cornflowerblue;
+    /*background-image: url("img/1234.jpg");*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,6 +13,9 @@ body {
 
 p {
     position: absolute;
+    margin-left: auto ;
+    margin-right: auto ;
+    text-align: center;
     color: chartreuse;
     font-size: 25px;
     top: 20px;

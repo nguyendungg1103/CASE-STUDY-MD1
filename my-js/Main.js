@@ -9,15 +9,21 @@ function collides(obj1, obj2) {
 // vòng lặp trò chơi
 let check = false;
 let checkwin = "";
+let audio = document.querySelector("audio");
+let img = document.getElementById('imgtank');
 
 function loop() {
     requestAnimationFrame(loop);// giup vong lap chay on dinh hon
     context.clearRect(0, 0, canvas.width, canvas.height);
     object();
+
     for (let i = grid; i < canvas.height - grid; i += grid * 2) {
-        context.fillRect(canvas.width / 2 - grid / 2, i, grid, grid);
+        // context.fillRect(canvas.width / 2 - grid / 2, i, grid, grid);
+        context.drawImage(img, canvas.width / 2 - grid / 2, i, grid, grid)
     }
-    if (check == false) {
+
+
+    if (check === false) {
         paddle.paddleLeft.y += paddle.paddleLeft.dy;
         paddle.paddleRight.y += paddle.paddleRight.dy;
 
@@ -43,7 +49,7 @@ function loop() {
         if (ball.y < grid) {
             ball.y = grid;
             ball.dy *= -1;
-        } else if (ball.y + grid > canvas.height - grid) {
+        } else if (ball.y + grid  > canvas.height - grid ) {
             ball.y = canvas.height - grid * 2;
             ball.dy *= -1;
         }
@@ -102,8 +108,6 @@ function loop() {
         // trong khung tiếp theo.
         ball.x = paddle.paddleRight.x - ball.width;
     }
-
-
 
 
 }
